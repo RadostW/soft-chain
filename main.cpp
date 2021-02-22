@@ -17,9 +17,27 @@
 
 #include "chain_generator.cpp"
 #include "rotne_prager.cpp"
+#include "args_parser.cpp"
 #include <stdio.h>
 
-int main()
+int main(int argc, char **argv)
 {
-    printf("Hello!");
+    InputParser input(argc, argv);
+    if(input.cmdOptionExists("-h") || input.cmdOptionExists("--help")){
+        printf("Soft chain generator!\n\n");
+        printf("Chain descriptions are json arrays of triples [hydrodynamic size, steric size, count]\n");
+        printf("\n");
+        printf("Usage:\n");
+        printf("main.exe [-h|--help]\n");
+        printf("main.exe -c CHAIN -n ENSEMBLESIZE [-m|-r]\n");
+        printf("\n");
+        printf("Sample single chain of length 10:\nmain.exe -c [[1,1,10]]\n\n");
+        printf("Sample 33 chains of length 10:\nmain.exe -c [[1,1,10]] -n 33\n\n");
+        printf("Grand mobility matrix from ensemble of size 33:\nmain.exe -c [[1,1,10]] -n 33 -m\n\n");
+        printf("Hydrodynamic size from ensemble of size 33:\nmain.exe -c [[1,1,10]] -n 33 -r\n\n");
+    }
+    else
+    {
+        
+    }
 }

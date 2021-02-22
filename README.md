@@ -26,6 +26,9 @@ If you want to colaborate on some use of this code try starting here:
 
 https://www.fuw.edu.pl/~rwaszkiewicz
 
+# To compile
+`g++ main.cpp -o main.exe`
+
 # License
 This project is licensed under MIT license
 Eigen library is licensed under MPL2 license (used for matrix inversion)
