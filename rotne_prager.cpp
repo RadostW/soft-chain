@@ -34,9 +34,9 @@
 typedef std::map<int,std::map<int,double> > vararr;
 typedef std::vector<Chain> Ensemble;
 
-vararr ensembleAveragedMobility(Ensemble ensemble,vdouble ensembleStepSizesDesign, vdouble ensembleBeadSizesDesign)
+vararr ensembleAveragedMobility(Ensemble ensemble, vdouble ensembleBeadSizesDesign)
 {
-    int l = ensembleStepSizesDesign.size();
+    int l = ensembleBeadSizesDesign.size();
     int m = ensemble.size();
     auto ensembleTraceMobility = vararr();
     for(int i=0;i<l;i++)for(int j=0;j<l;j++) ensembleTraceMobility[i][j] = 0;
