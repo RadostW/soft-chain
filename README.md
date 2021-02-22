@@ -28,3 +28,4 @@ https://www.fuw.edu.pl/~rwaszkiewicz
 
 # License
 This project is licensed under MIT license
+Eigen library is licensed under MPL2 license (used for matrix inversion)
